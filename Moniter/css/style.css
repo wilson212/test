@@ -1,0 +1,155 @@
+BODY {
+	background : Silver;
+	color : Black;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 9pt;
+	scrollbar-arrow-color : Gray;
+	scrollbar-face-color : #EEEEEE;
+	scrollbar-highlight-color : Gray;
+	scrollbar-3dlight-color : Silver;
+	scrollbar-shadow-color : Gray;
+	scrollbar-darkshadow-color : Silver;
+	scrollbar-track-color: Silver;
+	margin : 0px 0px 0px 0px;
+}
+.title {
+	background-color : #FFCF75;
+	font-weight : bold;
+}
+.important {
+	color: #FE0000;
+}
+.green {
+	color: #008000;
+}
+.noborders {
+	border : 0px none;
+	background : none;
+}
+.zeroborders {
+	border : 0px none;
+}
+.blackborder {
+	border : 1px solid Black;
+}
+.tr_backimg {
+	background : url(../imgs/bf2_table_bg.jpg) repeat;
+	border : 0px none;
+	background-color : transparent;
+}
+.tr_graybg {
+	background-color : #EEEEEE;
+}
+.logotable {
+	color : Black;
+	background-color : #EEEEEE;
+	border : 1px solid Black;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 9pt;
+}
+TABLE {
+	color : Black;
+	font : 9pt "MS Sans Serif", Geneva, sans-serif;
+	background-color : #EEEEEE;
+	border : 1px solid Gray;
+	background : url(../imgs/bf2_bg.jpg) repeat;
+}
+TR {
+}
+TD {
+}
+A {
+	color : Navy;
+	font : "MS Sans Serif", Geneva, sans-serif;
+	font-weight : bold;
+	text-decoration : none;
+}
+A:HOVER {
+	color : Maroon;
+	font-weight : bold;
+	text-decoration : underline;
+}
+.nonbold {
+	font-weight: normal;
+}
+H5 {
+	text-align : center;
+	font-size : 12pt;
+	margin-bottom : 1pt;
+	margin-top : 1pt;
+}
+H6 {
+	font-size : 11pt;
+	margin-bottom : 5pt;
+	margin-top : 5pt;
+}
+IMG {
+	border : Black;
+}
+P {
+	text-indent : 10pt;
+	text-align : justify;
+	margin-top : 10pt;
+	margin-bottom : 5pt;
+	margin-left : 5pt;
+	margin-right : 5pt;
+}
+.note {
+	text-indent : -15pt;
+	text-align : justify;
+	margin-top : 10pt;
+	margin-bottom : 5pt;
+	margin-left : 25pt;
+	margin-right : 10pt;
+	color : Gray;
+}
+UL {
+	text-align : left;
+	margin-top : 0pt;
+	margin-bottom : 0pt;
+}
+.liststyle_none {
+	list-style-type : none;
+}
+.liststyle_disk {
+	list-style-type : disc;
+}
+.liststyle_circle {
+	list-style-type : circle;
+}
+OL {
+	text-align : left;
+	margin-top : 0pt;
+	margin-bottom : 0pt;
+	text-indent : 5pt;
+}
+.button {
+	background: #DDDDDD;
+	border: 1px solid #000000;
+	color: #000000;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	padding: 1px 1px 1px 1px;
+	vertical-align: text-bottom;
+	margin : 1px 1px 1px 1px;
+}
+INPUT {
+	border: 1px solid Gray;
+	color: #000000;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	background-color : #FFFFFF;
+	padding: 1px 1px 1px 1px;
+	vertical-align: text-bottom;
+	margin : 1px 1px 1px 1px;
+}
+TEXTAREA {
+	border: 1px solid Gray;
+	color: #000000;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	background-color : #FFFFFF;
+	padding: 1px 1px 1px 1px;
+	vertical-align: text-bottom;
+	margin : 1px 1px 1px 1px;
+}

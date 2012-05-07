@@ -1,0 +1,18 @@
+DIV {
+	float: left;
+	position: relative;
+	margin: 2px 2px 2px 0px;
+}
+.div_popup {
+	background : url(../imgs/bf2_bg.jpg) repeat;
+	display: none;
+	position: absolute;
+	top: 65px;
+	left: -105px;
+	z-index: 50;
+	border: 1px solid Black;
+	-moz-opacity: .95;
+}
+.div_award:hover DIV.div_popup {
+	display: block;
+}

@@ -1,0 +1,28 @@
+.s, td.s {
+  font-family:  Verdana, Tahoma, Helvetica;
+  font-size: 7pt;
+  color: #FFFFFF;
+}
+
+.s2 {
+  font-family: Verdana, Tahoma, Helvetica;
+  font-size: 10pt;
+  color: #FFFFFF;
+}
+
+.s3 {
+  font-family: Verdana, Tahoma, Helvetica;
+  font-size: 12pt;
+  color: #FFFFFF;
+}
+
+.nc {
+  font-family: Verdana, Helvetica, Tahoma;
+  font-size: 7pt;
+}
+
+.ab {
+  font-family: Verdana, Helvetica, Tahoma;
+  font-size: 7pt;
+  color: #ABAAAA;
+}

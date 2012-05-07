@@ -1,0 +1,72 @@
+#!/bin/env php
+<?php
+$path = 'C:\Users\Steve\Desktop\testgit\\';
+$message = file_get_contents($argv[1]);
+checkMessage($message);
+exit(0);
+ 
+function checkMessage($message)
+{
+    global $path;
+    if (strlen($message) < 5) 
+    {
+        echo 'A commit message at least five characters';
+        exit(1);
+    }
+    
+    // get the first 5
+    $line = substr($message,0,5);
+    if(!preg_match('/\[([0-9]+)\]/', $line, $output))
+    {
+        echo 'No build number found. Please correct the commit message by including the build number "[100]"';
+        exit(1);
+    }
+    
+    $file = file_get_contents($path . 'index.php');
+    if(preg_match('/CMS_VERSION\', ([0-9]+)/', $file, $matches))
+    {
+        // Update the commit message and index file
+        $version = $matches[1] + 1;
+        
+        // Make sure versions match!
+        if($version != $output[1])
+        {
+            echo 'Commit message version does NOT match the index.php version (+1)!';
+            exit(1);
+        }
+        
+        // Write to the index file, the new version
+        $contents = str_replace($matches[1], $version, $matches[0]);
+        file_put_contents($path . 'index.php', str_replace($matches[0], $contents, $file)); 
+        exec('git add index.php', $output);
+        
+        // Create the commit.info page
+        exec('git diff --cached --name-status', $output);
+        $array = array();
+
+        // make a fancy array for the updater
+        foreach($output as $mod)
+        {
+            list($type, $file) = explode("\t", $mod);
+            
+            // make sure the file is not null
+            if($file != null)
+            {
+                $array[] = array('status' => $type, 'file' => $file);
+            }
+        }
+
+        // Write the commit contents to the commit info file
+        if(!empty($array))
+        {
+            file_put_contents($path .'commit.info', json_encode($array));
+            exec('git add commit.info', $output);
+        }
+    }
+    else
+    {
+        echo 'No build number found. Please correct the commit message by including the build number "[100]"';
+        exit(1);
+    }
+}
+?>

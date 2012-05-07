@@ -1,0 +1,16 @@
+#!/bin/env php
+<?php
+$path = 'C:\Users\Steve\Desktop\testgit\\';
+$file = file_get_contents($path . 'index.php');
+if(preg_match('/CMS_VERSION\', ([0-9]+)/', $file, $matches))
+{
+    // Update the commit message and index file
+    file_put_contents($argv[1], "[" . ($matches[1] + 1) ."] ");
+    exit(0);
+}
+else
+{
+    echo 'No build number found. Please correct the commit message by including the build number "[100]"';
+    exit(1);
+}
+?>
